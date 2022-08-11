@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Youtube-WebAPI-Project/static/css/main.073c9b0a.css",
+    "main.js": "/Youtube-WebAPI-Project/static/js/main.8a3ef102.js",
+    "static/js/787.346bf8ac.chunk.js": "/Youtube-WebAPI-Project/static/js/787.346bf8ac.chunk.js",
+    "static/media/logo.svg": "/Youtube-WebAPI-Project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Youtube-WebAPI-Project/index.html",
+    "main.073c9b0a.css.map": "/Youtube-WebAPI-Project/static/css/main.073c9b0a.css.map",
+    "main.8a3ef102.js.map": "/Youtube-WebAPI-Project/static/js/main.8a3ef102.js.map",
+    "787.346bf8ac.chunk.js.map": "/Youtube-WebAPI-Project/static/js/787.346bf8ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.8a3ef102.js"
+  ]
+}
