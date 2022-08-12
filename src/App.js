@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Welcome to Group C Youtube API project 
+          Welcome to Group C Youtube API projects 
         </a>
       </header>
     </div>
