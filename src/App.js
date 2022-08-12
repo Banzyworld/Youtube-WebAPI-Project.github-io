@@ -17,7 +17,7 @@ function App() {
         >
           Group C Youtube API Project
         </a>
-        <p>Just making dummy edits here</p>
+        <p>Just making dummy edits here to know if it commits</p>
       </header>
     </div>
   );
