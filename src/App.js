@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Welcome to Group C Youtube API project 
         </a>
       </header>
     </div>
