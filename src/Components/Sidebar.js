@@ -1,30 +1,22 @@
-import React from 'react';
-import SideBarSections from './SideBarSections';
-import './Sidebar.css';
-import HomeIcon from '@mui/icons-material/Home';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
-import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
-import HistoryIcon from '@mui/icons-material/History';
-import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
-import WatchLaterIcon from '@mui/icons-material/WatchLater';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-// import { AiFillHome } from 'react-icons/fa';
+import React from 'react'
+import { AiFillHome,AiFillLike } from "react-icons/ai";
+import { MdWhatshot,MdSubscriptions,MdVideoLibrary,MdHistory,MdOutlineOndemandVideo } from "react-icons/md";
+import SidebarSection from './sidebarSection'
+import './Sidebar.css'
 
 
 const SideBar = () => {
   return (
       <div className='sidebar'>
-          <SideBarSections selected Icon={HomeIcon} title='Home' />
-          <SideBarSections Icon={WhatshotIcon} title='Trending' />
-          <SideBarSections Icon={SubscriptionsIcon} title='Subscription' />
-          <hr />
-          <SideBarSections Icon={VideoLibraryIcon} title='Library' />
-          <SideBarSections Icon={HistoryIcon} title='History' />
-          <SideBarSections Icon={OndemandVideoIcon} title='Your videos' />
-          <SideBarSections Icon={WatchLaterIcon} title='Watch later' />
-          <SideBarSections Icon={ThumbUpIcon} title='Liked vides' />
-          <hr />
+        <SidebarSection selected Icon={AiFillHome} title='Home' />
+        <SidebarSection  Icon={MdWhatshot} title='Trending' />
+        <SidebarSection  Icon={MdSubscriptions} title='Subscription' />
+        <hr />
+        <SidebarSection  Icon={MdVideoLibrary} title='Library' />
+        <SidebarSection  Icon={MdHistory} title='Your Videos' />
+        <SidebarSection  Icon={MdOutlineOndemandVideo} title='Watch later' />
+        <SidebarSection  Icon={AiFillLike} title='Liked videos' />
+        <hr />
       </div>
   )
 }

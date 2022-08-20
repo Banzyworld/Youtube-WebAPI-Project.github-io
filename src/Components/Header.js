@@ -1,44 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AppsIcon from '@mui/icons-material/Apps';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import './Header.css';
+import  {AiOutlineMenu,AiOutlineSearch}  from 'react-icons/ai';
+import { IoAppsSharp,IoNotifications } from "react-icons/io5"
+import  {MdVideoCall}  from 'react-icons/md';
+import { VscAccount } from "react-icons/vsc"
+import './Header.css'
+
 
 
 
 const Header = () => {
   return (
-        <div className='header'>
-          <div className="headerLeft">
-            <MenuIcon />
-            <Link to='/'>
-              <img 
-                className='headerLogo'
-                src='https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg'
-                alt=''
-              />
-            </Link>
-          </div>
-          
-          <div className="headerCenter">
-            <input type='text'/>
-            <SearchIcon className='headerSearchbutton'/>
-          </div>
+    <div className='header'>
+      <div className='header__left'>
+        <AiOutlineMenu />
+        <img className='header__logo' src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" alt="" />
+      </div>
 
-          <div className="headerRight">
-            <VideoCallIcon className='headerIcon'/>
-            <AppsIcon className='headerIcon'/>
-            <NotificationsIcon className='headerIcon'/>
-            <AccountCircleIcon
-              alt='Nouman Ahmed'
-              stc='https://avatars1.githubusercontent.com/u/35970677?s=60&v=4'
-            />
-          </div>
-        </div>
+      <div className="header__center">
+        <input className='search-bar' type="text" name="" id="" />
+        <AiOutlineSearch className='header__searchbutton'/>
+      </div>
+
+      <div className="header__right">
+        <MdVideoCall className='header__icon' />
+        <IoAppsSharp className='header__icon'/>
+        <IoNotifications className='header__icon'/>
+        <VscAccount />
+      </div>
+      
+    </div>
 
   )
 }
