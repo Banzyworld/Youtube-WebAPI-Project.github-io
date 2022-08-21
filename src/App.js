@@ -1,6 +1,6 @@
-import Sidebar from './components/Sidebar';
+import Sidebar from './Components/Sidebar';
 import './App.css';
-import Header from './components/Header';
+import Header from './Components/Header';
 function App() {
   return (
    <div className="App">

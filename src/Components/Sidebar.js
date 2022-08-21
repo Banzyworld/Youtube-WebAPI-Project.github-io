@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillHome,AiFillLike } from "react-icons/ai";
 import { MdWhatshot,MdSubscriptions,MdVideoLibrary,MdHistory,MdOutlineOndemandVideo } from "react-icons/md";
-import SidebarSection from './sidebarSection'
+import SidebarSection from './SideBarSection'
 import './Sidebar.css'
 
 
