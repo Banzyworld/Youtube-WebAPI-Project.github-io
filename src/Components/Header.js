@@ -17,8 +17,8 @@ const Header = () => {
       </div>
 
       <div className="header__center">
-        <input className='search-bar' type="text" name="" id="" />
-        <AiOutlineSearch className='header__searchbutton'/>
+        <input className='search-bar' type="text" name="" id="" placeholder='Search' />
+        <AiOutlineSearch size={38} className='header__searchbutton'/>
       </div>
 
       <div className="header__right">
