@@ -1,6 +1,7 @@
 *:focus {
     outline: none;
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -10,26 +11,23 @@
     top: 0;
     z-index: 100;
     background-color: white;
+    padding: 10px 2.5vw;
 }
 
-.headerLogo {
+.header__logo {
     height: 25px;
     object-fit: contain;
     margin-left: 10px;
 }
 
-.headerCenter {
+.header__center {
     display: flex;
     align-items: center;
     width: 40%;
     border: 1px solid lightgray
 }
 
-.headerCenter>input {
-    flex: 1;
-}
-
-.headerSearchbutton {
+.header__searchbutton {
     width: 50px !important;
     border-color: #fafafa;
     border-left: 1px solid lightgray;
@@ -37,12 +35,24 @@
     cursor: pointer;
 }
 
-.headerRight {
+.header__right {
     display: flex;
     align-items: center;
 }
 
-.headerIcon {
+.header__icon {
     margin-right: 12px;
 }
 
+.header__center>input {
+    flex: 1;
+}
+
+.search-bar {
+    width: 85%;
+    height: 100%;
+    /* border: 2px solid #dbdbdb; */
+    padding: 5px 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
