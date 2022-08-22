@@ -30,7 +30,7 @@
 .header__searchbutton {
     width: 50px !important;
     border-color: #fafafa;
-    border-left: 1px solid black;
+    border-left: 1px solid lightgray;
     color: gray;
     cursor: pointer;
 }
