@@ -30,7 +30,9 @@
 .header__searchbutton {
     width: 50px !important;
     border-color: #fafafa;
-    border-left: 1px solid lightgray;
+    border: 1px solid black;
+    border-left: none;
+    padding: 1px 10px;
     color: gray;
     cursor: pointer;
 }
@@ -55,7 +57,7 @@
 .search-bar {
     width: 85%;
     height: 100%;
-    padding: 9px 10px;/*padding 9px 10px is more aligned here segun*/
+    padding: 10px 10px;
     font-size: 16px;
     text-transform: capitalize;
 }
