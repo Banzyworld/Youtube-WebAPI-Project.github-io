@@ -1,5 +1,6 @@
 import React from 'react'
-import  {AiOutlineMenu,AiOutlineSearch}  from 'react-icons/ai';
+import  {AiOutlineMenu}  from 'react-icons/ai';
+import {IoIosSearch} from 'react-icons/io'
 import { IoAppsSharp,IoNotifications } from "react-icons/io5"
 import  {MdVideoCall}  from 'react-icons/md';
 import { VscAccount } from "react-icons/vsc"
@@ -18,14 +19,14 @@ const Header = () => {
 
       <div className="header__center">
         <input className='search-bar' type="text" name="" id="" placeholder='search' />
-        <AiOutlineSearch size={38} className='header__searchbutton'/>
+        <IoIosSearch size={38} className='header__searchbutton'/>
       </div>
 
       <div className="header__right">
-        <MdVideoCall className='header__icon' />
-        <IoAppsSharp className='header__icon'/>
-        <IoNotifications className='header__icon'/>
-        <VscAccount />
+        <MdVideoCall size={32} className='header__icon' />
+        <IoAppsSharp size={32} className='header__icon'/>
+        <IoNotifications size={32} className='header__icon'/>
+        <VscAccount size={32} />
       </div>
       
     </div>
