@@ -35,6 +35,10 @@
     cursor: pointer;
 }
 
+.header__searchbutton:hover {
+    background-color: lightgray;
+}
+
 .header__right {
     display: flex;
     align-items: center;
