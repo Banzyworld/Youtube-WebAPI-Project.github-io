@@ -24,18 +24,19 @@
     display: flex;
     align-items: center;
     width: 45%;
-    border: none;
-  
+    border: none
 }
 
 .header__searchbutton {
     width: 50px !important;
     border-color: #fafafa;
-    border: 1px solid  black;
-    border-left: none;
-    padding: 1px 10px;
+    border-left: 1px solid lightgray;
     color: gray;
     cursor: pointer;
+}
+
+.header__searchbutton:hover {
+    background-color: lightgray;
 }
 
 .header__right {
@@ -54,8 +55,7 @@
 .search-bar {
     width: 85%;
     height: 100%;
-    /* border: solid #dbdbdb; */
-    padding: 10px 10px;
+    padding: 9px 10px;/*padding 9px 10px is more aligned here segun*/
     font-size: 16px;
     text-transform: capitalize;
 }

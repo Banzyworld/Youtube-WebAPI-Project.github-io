@@ -1,6 +1,6 @@
 import React from 'react'
-import { VscAccount } from 'react-icons/vsc'
-
+import { VscAccount } from "react-icons/vsc"
+import './Videocard.css'
 const Videocard = ({image, title, channel, views, timestamp, channelImage}) => {
   return (
     <div className="videocard">
@@ -17,6 +17,7 @@ const Videocard = ({image, title, channel, views, timestamp, channelImage}) => {
             </div> 
         </div>
     </div>
+
   )
 }
 
