@@ -4,6 +4,7 @@ import './Videodisplay.css'
 import { CircularProgress } from '@mui/material';
 import {DateTime} from 'luxon';
 import { Alert } from '@mui/material'
+import axios from 'axios';
 
 const Videodisplay =  () => {
     const [videoCards, setVideoCards] = useState([]);
@@ -23,15 +24,17 @@ const Videodisplay =  () => {
     })
     }, [])
 
-    //Getting response and saving to function called createVideoCards
     useEffect(() => {
-    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=US&key=AIzaSyCJ8IYdyJgbQqhUhoXl9gWNCRYJLJlUVqE")
+    fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=US&key=AIzaSyCJ8IYdyJgbQqhUhoXl9gWNCRYJLJlUVqE`)
     .then(response => {
-        console.log (response.data.items)
-        createVideoCards(response.data.items)
+        return response.json()
+    }).then((response)=>{
+        console.log(response)
+        createVideoCards(response.items)
     })
     .catch(error => {
       console.log(error);
+      setIsError(true);
     })
     }, [])
 
@@ -41,14 +44,52 @@ const Videodisplay =  () => {
             const videoId = video.id;
             const snippet = video.snippet;
             const channelId = snippet.channelId;
-            const response = fetch
+            const response = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=AIzaSyCJ8IYdyJgbQqhUhoXl9gWNCRYJLJlUVqE`)
+            const channelImage = response.data.items[0].snippet.thumbnails.high.url;
+            const title = snippet.title;
+            const image = snippet.thumbnails.high.url;
+            const views = video.statistics.viewCount;
+            const timestamp = DateTime.fromISO(snippet.publishedAt).toRelative();
+            const channel = snippet.channelTitle;
+           
+            newVideoCards.push({
+            videoId,
+            image,
+            title,
+            channel,
+            views,
+            timestamp,
+            channelImage
+          })
         }
+        setVideoCards(newVideoCards);
+        setIsLoading(false);
+    }
+
+    if (isError){
+      return <Alert severity="warning">This is a warning alert — check it out!</Alert>
     }
 
   return (
-    <div>
-
-    </div>
+    <div className="recommendedvideos">
+        {isLoading ? <CircularProgress className='loading' color='inherit' /> : null}
+        <div className="recommendedvideos__videos">
+            {
+             videoCards.map(item =>{
+                return(
+                 <Videocard key={item.videoId}
+                        title={item.title}
+                        image={item.image}
+                        views={item.views}
+                        timestamp={item.timestamp}
+                        channel={item.channel}
+                        channelImage={item.channelImage}
+                   />
+                )
+                })
+            }
+        </div>
+    </div>    
   )
 }
 
