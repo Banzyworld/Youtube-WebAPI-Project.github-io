@@ -9,7 +9,21 @@ const Videodisplay =  () => {
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
+    /*Results of fetched data from the youtube console*/
+    useEffect(() => {
+    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=9&regionCode=PK&key=AIzaSyCJ8IYdyJgbQqhUhoXl9gWNCRYJLJlUVqE")
+    .then((response)=>{
+    return response.json()
+    }).then((data)=>{
+    console.log(data)
+    })
+    .catch(error => {
+    console.log(error);
+    setIsError(true);
+    })
+    }, [])
 
+    //Getting response and saving to function called createVideoCards
     useEffect(() => {
     fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=US&key=AIzaSyCJ8IYdyJgbQqhUhoXl9gWNCRYJLJlUVqE")
     .then(response => {
@@ -20,6 +34,16 @@ const Videodisplay =  () => {
       console.log(error);
     })
     }, [])
+
+    async function createVideoCards(videoItems){
+        let newVideoCards = [];
+        for (const video of videoItems){
+            const videoId = video.id;
+            const snippet = video.snippet;
+            const channelId = snippet.channelId;
+            const response = fetch
+        }
+    }
 
   return (
     <div>
