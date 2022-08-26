@@ -1,13 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import  {AiOutlineMenu}  from 'react-icons/ai';
 import {IoIosSearch} from 'react-icons/io'
 import { IoAppsSharp,IoNotifications } from "react-icons/io5"
 import  {MdVideoCall}  from 'react-icons/md';
 import { VscAccount } from "react-icons/vsc"
 import './Header.css'
-
-
-
 
 const Header = () => {
   return (
