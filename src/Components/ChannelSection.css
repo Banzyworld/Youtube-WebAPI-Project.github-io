@@ -1,0 +1,31 @@
+.channelsection {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.channelsection__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.channelsection__text>p {
+    color: #606060;
+    font-size: small !important;
+}
+
+.channelsection__logo {
+    height: 120px !important;
+    width: 120px !important;
+    margin: 10px 60px;
+}
+
+.channelsection__text>* {
+    margin: 2px 2px;
+}
+
+.channelsection__text>h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
