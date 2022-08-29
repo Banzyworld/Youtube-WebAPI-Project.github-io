@@ -5,6 +5,10 @@
     cursor: pointer;
 }
 
+.videocard:hover {
+    opacity: 0.5;
+}
+
 .videocard__image {
     height: 140px;
     width: 250px;
