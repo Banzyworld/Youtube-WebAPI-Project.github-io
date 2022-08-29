@@ -1,6 +1,7 @@
 .videocard {
     width: 270px;
     margin-bottom: 40px;
+    padding: 10px 0 0 10px;
 }
 
 .videocard__image {
