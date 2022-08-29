@@ -21,7 +21,9 @@ const Header = () => {
 
       <div className="header__center">
         <input className='search-bar' type="text" placeholder='search' />
-        <IoIosSearch size={38} className='header__searchbutton'/>
+        <Link to={`/search/${inputSearch}`}>
+          <IoIosSearch size={38} className='header__searchbutton'/>
+        </Link>
       </div>
 
       <div className="header__right">
