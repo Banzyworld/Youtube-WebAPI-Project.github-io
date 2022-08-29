@@ -1,4 +1,5 @@
-import React from 'react'
+import React , {useState} from 'react'
+import { Link } from 'react-router-dom';
 import  {AiOutlineMenu}  from 'react-icons/ai';
 import {IoIosSearch} from 'react-icons/io'
 import { IoAppsSharp,IoNotifications } from "react-icons/io5"
@@ -6,20 +7,23 @@ import  {MdVideoCall}  from 'react-icons/md';
 import { VscAccount } from "react-icons/vsc"
 import './Header.css'
 
-
-
-
 const Header = () => {
+  const [inputSearch, setInputSearch] = useState('');
+
   return (
     <div className='header'>
       <div className='header__left'>
         <AiOutlineMenu />
-        <img className='header__logo' src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" alt="" />
+          <Link to="/">
+            <img className='header__logo' src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" alt="" />
+          </Link>
       </div>
 
       <div className="header__center">
-        <input className='search-bar' type="text" name="" id="" placeholder='search' />
-        <IoIosSearch size={38} className='header__searchbutton'/>
+        <input className='search-bar' type="text" placeholder='search' />
+        <Link to={`/search/${inputSearch}`}>
+          <IoIosSearch size={38} className='header__searchbutton'/>
+        </Link>
       </div>
 
       <div className="header__right">

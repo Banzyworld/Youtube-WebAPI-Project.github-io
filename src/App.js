@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Videodisplay from './Components/Videodisplay';
 import SearchBarPage from './Components/SearchBarPage';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
    <div className="App">
       <Router>
       <Header/>
-         <Switch>
+         <Routes>
             <Route path='/search/:searchQuery'>
                <div className="app__mainpage">
                   <Sidebar />
@@ -25,7 +25,7 @@ function App() {
                   <Videodisplay />
                </div>
             </Route>
-         </Switch>
+         </Routes>
       </Router>
    </div>
   );

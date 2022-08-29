@@ -1,6 +1,12 @@
 .videocard {
     width: 270px;
     margin-bottom: 40px;
+    padding: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+.videocard:hover {
+    opacity: 0.5;
 }
 
 .videocard__image {
