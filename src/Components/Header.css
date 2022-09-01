@@ -28,11 +28,13 @@
 }
 
 .header__searchbutton {
-    width: 47px !important;
+    width: 45px !important;
+    height:40px;
     border-color: #fafafa;
     border: 1px solid black;
     border-left: none;
-    padding: 1px 10px;
+    padding: 0px 10px;
+    margin-top: 3px;
     color: gray;
     cursor: pointer;
 }
