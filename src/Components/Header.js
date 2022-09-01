@@ -20,7 +20,7 @@ const Header = () => {
       </div>
 
       <div className="header__center">
-        <input className='search-bar' type="text" placeholder='search' />
+        <input className='search-bar' type="text" placeholder='search' onChange={(e) =>setInputSearch(e.target.value) } value={inputSearch} />
         <Link to={`/search/${inputSearch}`}>
           <IoIosSearch size={38} className='header__searchbutton'/>
         </Link>
