@@ -1,14 +1,17 @@
 .app__mainpage {
-  display: flex;
+	display: flex;
 }
 
 a {
-  text-decoration: inherit;
-  color: inherit;
+	text-decoration: inherit;
+	color: inherit;
 }
 
 .loading {
-  display: block !important;
-  width: 50%;
-  margin: auto;
+	display: block !important;
+	width: 50%;
+	margin: auto;
+}
+.margin-right {
+	margin-right: 50px;
 }
