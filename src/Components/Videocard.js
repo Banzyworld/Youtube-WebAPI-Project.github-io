@@ -10,6 +10,7 @@ const Videocard = ({
 	views,
 	timestamp,
 	channelImage,
+	// handleUpdatPlaylist,
 }) => {
 	return (
 		<div className="videocard">
@@ -28,7 +29,9 @@ const Videocard = ({
 					</p>
 				</div>
 			</div>
-			<IconButton>
+			<IconButton
+			//  onClick={}
+			>
 				<PlaylistAddRoundedIcon />
 			</IconButton>
 		</div>

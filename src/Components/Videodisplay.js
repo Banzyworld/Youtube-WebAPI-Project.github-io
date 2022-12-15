@@ -10,7 +10,7 @@ const Videodisplay = () => {
 	const [videoCards, setVideoCards] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [isError, setIsError] = useState(false);
-	const [playlist, setPlaylist] = useState([]);
+	// const [playlist, setPlaylist] = useState([]);
 	/*Results of fetched data from the youtube console*/
 	useEffect(() => {
 		fetch(
@@ -80,7 +80,15 @@ const Videodisplay = () => {
 			<Alert severity="warning">This is a warning alert — check it out!</Alert>
 		);
 	}
-
+	// const handleAddToPlaylist = (videoId, quantity) => {
+	// 	commerce.cart
+	// 		.add(videoId, quantity)
+	// 		.then(item => {
+	// 			setCart(item.cart);
+	// 		})
+	// 		.catch(error => {
+	// 			console.error('There was an error adding the item to the cart', error);
+	// 		});
 	return (
 		<div className="recommendedvideos">
 			{isLoading ? (
@@ -90,6 +98,7 @@ const Videodisplay = () => {
 				{videoCards.map(item => {
 					return (
 						<Videocard
+							// handleAddTPlaylist={}
 							key={item.videoId}
 							title={item.title}
 							image={item.image}
